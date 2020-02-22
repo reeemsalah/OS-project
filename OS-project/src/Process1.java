@@ -15,7 +15,7 @@ public class Process1 implements Runnable
 		// TODO Auto-generated method stub
 		try
 		{
-		String fileNameString="D:\\"+fileName.toString()+".txt";
+		String fileNameString=fileName.toString()+".txt";
 		File file = new File(fileNameString); 
 		  
 		  BufferedReader br = new BufferedReader(new FileReader(file)); 

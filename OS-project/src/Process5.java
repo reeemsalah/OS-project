@@ -23,7 +23,7 @@ public class Process5 implements Runnable
 			int upperNumber=(int)(this.upperNumber);
 			Random rand= new Random();
 			int fileNumber= rand.nextInt()*10000+1;
-			String fileName="D:\\"+"file_"+fileNumber+".txt";
+			String fileName="file_"+fileNumber+".txt";
 			File myFile=new File(fileName);
 			for(int i=lowerNumber;i<=upperNumber;i++)
 			{
