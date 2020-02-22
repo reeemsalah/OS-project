@@ -1,10 +1,13 @@
 
 public class Process2 implements Runnable
-{
-	private Object fileName;
-	private Object inputData;
-	public Process2(Object fileName,Object inputData)
+{ 
+	private int id;
+	private ProcessState state= ProcessState.RUNNING;
+	private String fileName;
+	private String inputData;
+	public Process2(int id ,String fileName,String inputData)
 	{
+		this.id=id;
 		this.fileName=fileName;
 		this.inputData=inputData;
 	}
@@ -13,8 +16,7 @@ public class Process2 implements Runnable
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
-			String fileName=(String)(this.fileName);
-			String inputData=(String)(this.inputData);
+			 fileName="D:\\"+"file_"+fileName+".txt";
 			milestone_1.systemCall2(inputData, fileName);
 		}
 		catch(Exception e)

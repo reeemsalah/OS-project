@@ -3,14 +3,16 @@ import java.util.Random;
 
 public class Process5 implements Runnable
 {
-	private Object lowerNumber;
-	private Object upperNumber;
+	private int id;
+	private ProcessState state= ProcessState.RUNNING;
+	private int lowerNumber;
+	private int upperNumber;
 	
-	public Process5 (Object lowerNumber,Object upperNumber)
+	public Process5 (int id,int lowerNumber,int upperNumber)
 	{
+		this.id=id;
 		this.lowerNumber=lowerNumber;
 		this.upperNumber=upperNumber;
-		
 		
 	}
 
@@ -19,12 +21,12 @@ public class Process5 implements Runnable
 		// TODO Auto-generated method stub
 		try
 		{
-			int lowerNumber=(int)(this.lowerNumber);
-			int upperNumber=(int)(this.upperNumber);
-			Random rand= new Random();
-			int fileNumber= rand.nextInt()*10000+1;
-			String fileName="file_"+fileNumber+".txt";
+			
+			
+			int fileNumber=(int)(Math.random()*10000+1);
+			String fileName="D:\\"+"file_"+fileNumber+".txt";
 			File myFile=new File(fileName);
+			myFile.createNewFile();
 			for(int i=lowerNumber;i<=upperNumber;i++)
 			{
 				String tmp=""+i;
