@@ -32,41 +32,37 @@ public class milestone_1 {
 
 	}
 
-	public static void systemCall3() {
-
+	public static void systemCall3(int x)
+	{
+		System.out.println(x);
 	}
-
-	public static void systemCall4() {
-
+	public static String systemCall4()
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		return s;
+		
 	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		 Scanner sc = new Scanner(System.in);
-		
-		 
-		  
-		 int i =sc.nextInt();
-		 int j =sc.nextInt();
-		 count++; 
-		 Process5 p1 = new Process5(count, i, j); 
-		 p1.run();
-
-		  
-		 
-		 String f2 = sc.nextLine();
-		 String s = sc.nextLine();
-		count++; 
-		Process2 p2 = new Process2(count, f2 , s);
+		count++;
+		Process1 p1= new Process1(count,"filetest_final");
+		count++;
+		Process2 p2=new Process2(count,"filetest_final","data entered");
+		count++;
+		Process3 p3=new Process3(count);
+		count++;
+		Process4 p4=new Process4(count);
+		count++;
+		Process5 p5=new Process5(count,400,700);
+		p1.run();
 		p2.run();
-		 
-		 
-		
-		 String f1 = sc.nextLine();
-		 count++; 
-		Process1  p3 = new Process1(count, f1);
 		p3.run();
+		p4.run();
+		p5.run();
+		
+		
 		 
 
 	}

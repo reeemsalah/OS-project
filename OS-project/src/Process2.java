@@ -16,7 +16,7 @@ public class Process2 implements Runnable
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
-			 fileName="D:\\"+"file_"+fileName+".txt";
+			 fileName="D:\\"+fileName+".txt";
 			milestone_1.systemCall2(inputData, fileName);
 		}
 		catch(Exception e)
