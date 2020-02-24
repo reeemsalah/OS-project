@@ -5,14 +5,10 @@ public class Process5 implements Runnable
 {
 	private int id;
 	private ProcessState state= ProcessState.RUNNING;
-	private int lowerNumber;
-	private int upperNumber;
 	
-	public Process5 (int id,int lowerNumber,int upperNumber)
+	public Process5 (int id)
 	{
 		this.id=id;
-		this.lowerNumber=lowerNumber;
-		this.upperNumber=upperNumber;
 		
 	}
 
@@ -22,7 +18,8 @@ public class Process5 implements Runnable
 		try
 		{
 			
-			
+			int lowerNumber=Integer.parseInt(OS.systemCall4());
+			int upperNumber=Integer.parseInt(OS.systemCall4());
 			int fileNumber=(int)(Math.random()*10000+1);
 			String fileName="D:\\"+"file_"+fileNumber+".txt";
 			File myFile=new File(fileName);
@@ -30,7 +27,7 @@ public class Process5 implements Runnable
 			for(int i=lowerNumber;i<=upperNumber;i++)
 			{
 				String tmp=""+i;
-				milestone_1.systemCall2(tmp, fileName);
+				OS.systemCall2(tmp, fileName);
 			}
 		}
 		catch(Exception e)

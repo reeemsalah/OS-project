@@ -1,14 +1,15 @@
 
 import java.io.*;
+import java.util.ArrayList;
 public class Process1 implements Runnable
 {	
 	private int id;
 	private ProcessState state= ProcessState.RUNNING;
-	private String fileName;
-	public Process1 (int id,String fileName)
+	
+	public Process1 (int id)
 	{
 		this.id=id;
-		this.fileName=fileName;
+		
 	}
 	
 	@Override
@@ -18,15 +19,11 @@ public class Process1 implements Runnable
 		try
 		{
 	
-		 
-			String fileNameString="D:\\"+fileName.toString()+".txt";
-			File file = new File(fileNameString); 
-			BufferedReader br = new BufferedReader(new FileReader(file)); 
-			  
-		  String st; 
-		  while ((st = br.readLine()) != null) 
-		    System.out.println(st);
-		
+			String fileName=OS.systemCall4();
+			 fileName="D:\\"+fileName+".txt";
+			ArrayList<String> res=OS.systemCall1(fileName);		
+			for(String s:res)
+				OS.systemCall3(s);
 		}
 		catch(Exception e)
 		{

@@ -3,21 +3,22 @@ public class Process2 implements Runnable
 { 
 	private int id;
 	private ProcessState state= ProcessState.RUNNING;
-	private String fileName;
-	private String inputData;
-	public Process2(int id ,String fileName,String inputData)
+	
+	public Process2(int id )
 	{
 		this.id=id;
-		this.fileName=fileName;
-		this.inputData=inputData;
+		
 	}
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		try {
+			
+			String fileName=OS.systemCall4();
+			String inputData=OS.systemCall4();
 			 fileName="D:\\"+fileName+".txt";
-			milestone_1.systemCall2(inputData, fileName);
+			OS.systemCall2(inputData, fileName);
 		}
 		catch(Exception e)
 		{

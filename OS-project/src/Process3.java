@@ -12,7 +12,7 @@ public class Process3 implements Runnable
 		// TODO Auto-generated method stub
 		for(int i=0; i<=300 ; i++)
 		{	
-		milestone_1.systemCall3(i);
+		OS.systemCall3(""+i);
 		}
 	}
 	
