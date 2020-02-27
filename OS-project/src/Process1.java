@@ -20,7 +20,7 @@ public class Process1 implements Runnable
 		{
 	
 			String fileName=OS.systemCall4();
-			 fileName="D:\\"+fileName+".txt";
+			 fileName=fileName+".txt";
 			ArrayList<String> res=OS.systemCall1(fileName);		
 			for(String s:res)
 				OS.systemCall3(s);

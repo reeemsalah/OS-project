@@ -19,7 +19,7 @@ public class OS {
 
 	public static ArrayList<String> systemCall1(String fileName) throws IOException {
 		ArrayList<String> res=new ArrayList<>();
-		String fileNameString="D:\\"+fileName.toString()+".txt";
+		String fileNameString=fileName+".txt";
 		File file = new File(fileNameString); 
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
 		  

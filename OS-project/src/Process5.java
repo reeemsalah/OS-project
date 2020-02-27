@@ -21,7 +21,7 @@ public class Process5 implements Runnable
 			int lowerNumber=Integer.parseInt(OS.systemCall4());
 			int upperNumber=Integer.parseInt(OS.systemCall4());
 			int fileNumber=(int)(Math.random()*10000+1);
-			String fileName="D:\\"+"file_"+fileNumber+".txt";
+			String fileName="file_"+fileNumber+".txt";
 			File myFile=new File(fileName);
 			myFile.createNewFile();
 			for(int i=lowerNumber;i<=upperNumber;i++)
