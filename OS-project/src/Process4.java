@@ -9,7 +9,7 @@ public class Process4 implements Runnable
 	}
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		
 		for(int i=500 ; i<=1000 ; i++)
 		{
 			OS.systemCall3(""+i);

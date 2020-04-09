@@ -12,7 +12,7 @@ public class Process2 implements Runnable
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		
 		try {
 			
 			String fileName=OS.systemCall4();

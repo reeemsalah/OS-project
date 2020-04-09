@@ -55,7 +55,7 @@ public class OS {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		
 		count++;
 		Process2 p2=new Process2(count);
